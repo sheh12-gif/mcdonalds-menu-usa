@@ -202,7 +202,7 @@
       <!-- Top Updated Pill -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-xs sm:text-sm font-semibold text-amber-200 mb-5">
         <span class="w-2 h-2 rounded-full bg-mcd-yellow"></span>
-        <span>Updated Menu 2026</span>
+        <span>Updated Menu October 2026</span>
       </div>
 
       <!-- Main SEO H1 Heading -->
@@ -276,85 +276,97 @@
 
   <!-- STICKY CATEGORY PILL BAR (Clean professional text buttons without emojis) -->
   <div class="sticky top-16 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
-      <!-- Primary Filter Pills Row with Desktop Scroll Arrows -->
-      <div class="relative flex items-center gap-1.5">
-        <button onclick="scrollBar('categoryPillContainer', -260)" aria-label="Scroll Categories Left" class="hidden md:flex shrink-0 w-7 h-7 rounded-full bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-mcd-red items-center justify-center border border-gray-200 transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+    <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-2.5">
+      <!-- Primary Filter Pills Row with Mobile & Desktop Scroll Arrows -->
+      <div class="relative flex items-center gap-1.5 sm:gap-2">
+        <!-- Left Arrow Button (Visible on both Mobile & Desktop) -->
+        <button id="catScrollLeftBtn" onclick="scrollBar('categoryPillContainer', -240)" aria-label="Scroll Categories Left" class="flex shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white hover:bg-red-50 active:bg-red-100 text-gray-700 hover:text-mcd-red items-center justify-center border border-gray-200/90 shadow-sm transition-all active:scale-95">
+          <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
         </button>
 
-        <div id="categoryPillContainer" class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-0.5 w-full">
-          <button onclick="selectCategoryPill('all')" data-cat="all" class="cat-pill active-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-mcd-red text-white shadow-sm transition-all">
-            All Menu (207 items)
-          </button>
-          <button onclick="selectCategoryPill('burgers')" data-cat="burgers" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Burgers
-          </button>
-          <button onclick="selectCategoryPill('chicken-sandwiches')" data-cat="chicken-sandwiches" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Chicken &amp; Fish
-          </button>
-          <button onclick="selectCategoryPill('mcnuggets-strips')" data-cat="mcnuggets-strips" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            McNuggets
-          </button>
-          <button onclick="selectCategoryPill('snack-wraps')" data-cat="snack-wraps" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Snack Wraps
-          </button>
-          <button onclick="selectCategoryPill('breakfast-items')" data-cat="breakfast-items" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Breakfast
-          </button>
-          <button onclick="selectCategoryPill('breakfast-meals')" data-cat="breakfast-meals" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Breakfast Meals
-          </button>
-          <button onclick="selectCategoryPill('extra-value-meals')" data-cat="extra-value-meals" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Value Meals
-          </button>
-          <button onclick="selectCategoryPill('mcvalue')" data-cat="mcvalue" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            McValue
-          </button>
-          <button onclick="selectCategoryPill('fries-sides')" data-cat="fries-sides" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Fries &amp; Sides
-          </button>
-          <button onclick="selectCategoryPill('happy-meal')" data-cat="happy-meal" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Happy Meal
-          </button>
-          <button onclick="selectCategoryPill('sweets-treats')" data-cat="sweets-treats" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Sweets
-          </button>
-          <button onclick="selectCategoryPill('mccafe-coffees')" data-cat="mccafe-coffees" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            McCafé
-          </button>
-          <button onclick="selectCategoryPill('specialty-drinks')" data-cat="specialty-drinks" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Specialty Drinks
-          </button>
-          <button onclick="selectCategoryPill('soft-drinks')" data-cat="soft-drinks" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Soft Drinks
-          </button>
-          <button onclick="selectCategoryPill('frozen-drinks')" data-cat="frozen-drinks" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Frozen Drinks
-          </button>
-          <button onclick="selectCategoryPill('smoothies')" data-cat="smoothies" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Smoothies
-          </button>
-          <button onclick="selectCategoryPill('tea-lemonade')" data-cat="tea-lemonade" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Tea &amp; Lemonade
-          </button>
-          <button onclick="selectCategoryPill('sauces')" data-cat="sauces" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Sauces
-          </button>
-          <button onclick="selectCategoryPill('dollar-menu')" data-cat="dollar-menu" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            $1 $2 $3 Menu
-          </button>
-          <button onclick="selectCategoryPill('shareables')" data-cat="shareables" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Shareables
-          </button>
-          <button onclick="selectCategoryPill('limited-time')" data-cat="limited-time" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
-            Limited Time
-          </button>
+        <!-- Scrollable Pills Container with subtle edge fades -->
+        <div class="relative flex-1 overflow-hidden">
+          <div id="categoryPillContainer" class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-0.5 w-full">
+            <button onclick="selectCategoryPill('all')" data-cat="all" class="cat-pill active-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-mcd-red text-white shadow-sm transition-all">
+              All Menu (207 items)
+            </button>
+            <button onclick="selectCategoryPill('burgers')" data-cat="burgers" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Burgers
+            </button>
+            <button onclick="selectCategoryPill('chicken-sandwiches')" data-cat="chicken-sandwiches" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Chicken &amp; Fish
+            </button>
+            <button onclick="selectCategoryPill('mcnuggets-strips')" data-cat="mcnuggets-strips" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              McNuggets
+            </button>
+            <button onclick="selectCategoryPill('snack-wraps')" data-cat="snack-wraps" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Snack Wraps
+            </button>
+            <button onclick="selectCategoryPill('breakfast-items')" data-cat="breakfast-items" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Breakfast
+            </button>
+            <button onclick="selectCategoryPill('breakfast-meals')" data-cat="breakfast-meals" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Breakfast Meals
+            </button>
+            <button onclick="selectCategoryPill('extra-value-meals')" data-cat="extra-value-meals" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Value Meals
+            </button>
+            <button onclick="selectCategoryPill('mcvalue')" data-cat="mcvalue" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              McValue
+            </button>
+            <button onclick="selectCategoryPill('fries-sides')" data-cat="fries-sides" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Fries &amp; Sides
+            </button>
+            <button onclick="selectCategoryPill('happy-meal')" data-cat="happy-meal" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Happy Meal
+            </button>
+            <button onclick="selectCategoryPill('sweets-treats')" data-cat="sweets-treats" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Sweets
+            </button>
+            <button onclick="selectCategoryPill('mccafe-coffees')" data-cat="mccafe-coffees" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              McCafé
+            </button>
+            <button onclick="selectCategoryPill('specialty-drinks')" data-cat="specialty-drinks" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Specialty Drinks
+            </button>
+            <button onclick="selectCategoryPill('soft-drinks')" data-cat="soft-drinks" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Soft Drinks
+            </button>
+            <button onclick="selectCategoryPill('frozen-drinks')" data-cat="frozen-drinks" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Frozen Drinks
+            </button>
+            <button onclick="selectCategoryPill('smoothies')" data-cat="smoothies" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Smoothies
+            </button>
+            <button onclick="selectCategoryPill('tea-lemonade')" data-cat="tea-lemonade" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Tea &amp; Lemonade
+            </button>
+            <button onclick="selectCategoryPill('sauces')" data-cat="sauces" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Sauces
+            </button>
+            <button onclick="selectCategoryPill('dollar-menu')" data-cat="dollar-menu" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              $1 $2 $3 Menu
+            </button>
+            <button onclick="selectCategoryPill('shareables')" data-cat="shareables" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Shareables
+            </button>
+            <button onclick="selectCategoryPill('limited-time')" data-cat="limited-time" class="cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all">
+              Limited Time
+            </button>
+          </div>
         </div>
 
-        <button onclick="scrollBar('categoryPillContainer', 260)" aria-label="Scroll Categories Right" class="hidden md:flex shrink-0 w-7 h-7 rounded-full bg-gray-100 hover:bg-red-50 text-gray-600 hover:text-mcd-red items-center justify-center border border-gray-200 transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        <!-- Right Arrow Button (Visible on both Mobile & Desktop) -->
+        <button id="catScrollRightBtn" onclick="scrollBar('categoryPillContainer', 240)" aria-label="Scroll Categories Right" class="flex shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white hover:bg-red-50 active:bg-red-100 text-gray-700 hover:text-mcd-red items-center justify-center border border-gray-200/90 shadow-sm transition-all active:scale-95">
+          <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         </button>
+      </div>
+
+      <!-- Interactive Slider Track Beneath Category Buttons (Clickable & Draggable on Mobile/Desktop) -->
+      <div class="mt-2 px-10 sm:px-11">
+        <div id="catSliderTrack" onclick="seekCategoryBar(event)" class="relative h-1.5 w-full bg-gray-200/90 rounded-full overflow-hidden cursor-pointer">
+          <div id="catSliderThumb" class="absolute top-0 left-0 h-full bg-mcd-red rounded-full transition-all duration-75" style="width: 18%; transform: translateX(0%);"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1755,48 +1767,45 @@
 
       return `
         <article class="bg-white rounded-2xl border border-gray-200/80 shadow-card hover:shadow-card-hover transition-all duration-200 flex flex-col justify-between overflow-hidden">
-          <div>
-            <!-- Empty Image Slot for Custom User Upload + Large Red Price Badge & Calorie Pill -->
-            <div class="relative h-44 sm:h-48 bg-gray-50/80 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
-              ${item.img ? `<img src="${item.img}" alt="${item.name}" loading="lazy" width="320" height="240" class="h-36 w-auto object-contain rounded-xl" />` : `
-                <div class="w-full h-full rounded-xl border border-dashed border-gray-200/80 flex items-center justify-center"></div>
-              `}
-              <!-- Enlarged Red Price Badge -->
-              <span class="absolute top-3 left-3 px-3.5 py-1.5 rounded-xl bg-mcd-red text-white font-black text-base sm:text-lg tracking-tight shadow-md">
-                ${item.price}
-              </span>
-              <!-- Calorie Badge (Shown when available) -->
-              ${hasCal ? `
-                <span class="absolute top-3 right-3 px-3 py-1.5 rounded-xl bg-white/95 text-gray-800 font-extrabold text-xs sm:text-sm shadow-sm border border-gray-200/80">
-                  ${item.cal}
-                </span>
-              ` : ''}
+          <div class="flex flex-col h-full justify-between">
+            <div>
+              <!-- Clean Empty Image Slot (Top badges removed) -->
+              <div class="relative h-44 sm:h-48 bg-gray-50/80 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+                ${item.img ? `<img src="${item.img}" alt="${item.name}" loading="lazy" width="320" height="240" class="h-36 w-auto object-contain rounded-xl" />` : `
+                  <div class="w-full h-full rounded-xl border border-dashed border-gray-200/80 flex items-center justify-center"></div>
+                `}
+              </div>
+
+              <!-- Card Body: Item Name & Optional Size Breakdown -->
+              <div class="p-4 sm:p-5 pb-0">
+                <h4 class="font-extrabold text-base sm:text-lg text-gray-900 leading-snug">
+                  ${item.name}
+                </h4>
+
+                ${hasVariants ? `
+                  <div class="mt-3.5 pt-3 border-t border-gray-100 space-y-2">
+                    ${item.variants.map(v => `
+                      <div class="flex items-center justify-between py-1.5 px-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100">
+                        <span class="font-semibold text-xs sm:text-sm text-gray-800 pr-2">${v.label}</span>
+                        <div class="flex items-center gap-2.5 shrink-0">
+                          ${v.cal ? `<span class="text-xs font-medium text-gray-500">${v.cal}</span>` : ''}
+                          <span class="px-2.5 py-0.5 rounded-lg bg-mcd-red text-white font-black text-sm sm:text-base">${v.price}</span>
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                ` : ''}
+              </div>
             </div>
 
-            <!-- Card Body: Only Name, Price, Calories (and Size Breakdown when applicable) -->
-            <div class="p-4 sm:p-5">
-              <h4 class="font-extrabold text-base sm:text-lg text-gray-900 leading-snug">
-                ${item.name}
-              </h4>
-
-              ${hasVariants ? `
-                <div class="mt-3.5 pt-3 border-t border-gray-100 space-y-2">
-                  ${item.variants.map(v => `
-                    <div class="flex items-center justify-between py-1.5 px-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100">
-                      <span class="font-semibold text-xs sm:text-sm text-gray-800 pr-2">${v.label}</span>
-                      <div class="flex items-center gap-2.5 shrink-0">
-                        ${v.cal ? `<span class="text-xs font-medium text-gray-500">${v.cal}</span>` : ''}
-                        <span class="px-2.5 py-0.5 rounded-lg bg-red-50 text-mcd-red font-black text-sm sm:text-base">${v.price}</span>
-                      </div>
-                    </div>
-                  `).join('')}
-                </div>
-              ` : `
-                <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-xs font-bold text-gray-500">${hasCal ? item.cal : 'Price'}</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-red-50 text-mcd-red font-black text-sm sm:text-base">${item.price}</span>
-                </div>
-              `}
+            <!-- Card Footer: Calorie Count at Bottom-Left & Enlarged Red Price Badge at Bottom-Right -->
+            <div class="p-4 sm:p-5 pt-3.5 mt-3.5 border-t border-gray-100 flex items-center justify-between gap-2">
+              <span class="px-3 py-1.5 rounded-xl bg-gray-100 text-gray-800 font-extrabold text-xs sm:text-sm border border-gray-200/80">
+                ${hasCal ? item.cal : 'Price'}
+              </span>
+              <span class="px-4 py-1.5 rounded-xl bg-mcd-red text-white font-black text-lg sm:text-xl tracking-tight shadow-sm">
+                ${item.price}
+              </span>
             </div>
           </div>
         </article>
@@ -1900,9 +1909,15 @@
 
     function updateActivePillUI(cat) {
       activeCategory = cat;
+      const container = document.getElementById('categoryPillContainer');
       document.querySelectorAll('.cat-pill').forEach(btn => {
         if (btn.dataset.cat === cat) {
           btn.className = 'cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-mcd-red text-white shadow-sm transition-all';
+          // Auto-center the selected category button inside the horizontal bar
+          if (container) {
+            const scrollTarget = btn.offsetLeft - (container.clientWidth / 2) + (btn.clientWidth / 2);
+            container.scrollTo({ left: Math.max(0, scrollTarget), behavior: 'smooth' });
+          }
         } else {
           btn.className = 'cat-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-mcd-red transition-all';
         }
@@ -1934,12 +1949,47 @@
       }
     }
 
-    // Horizontally slide category container on desktop arrows
+    // Horizontally slide category container on mobile & desktop arrows
     function scrollBar(containerId, amount) {
       const container = document.getElementById(containerId);
       if (container) {
         container.scrollBy({ left: amount, behavior: 'smooth' });
       }
+    }
+
+    // Sync the red slider indicator underneath the category buttons
+    function syncCategorySlider() {
+      const container = document.getElementById('categoryPillContainer');
+      const thumb = document.getElementById('catSliderThumb');
+      if (!container || !thumb) return;
+
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      if (maxScroll <= 0) {
+        thumb.style.width = '100%';
+        thumb.style.left = '0%';
+        return;
+      }
+
+      const visibleRatio = Math.max(0.15, Math.min(1, container.clientWidth / container.scrollWidth));
+      const thumbWidthPercent = visibleRatio * 100;
+      const scrollProgress = container.scrollLeft / maxScroll;
+      const maxLeftPercent = 100 - thumbWidthPercent;
+      const leftPercent = scrollProgress * maxLeftPercent;
+
+      thumb.style.width = `${thumbWidthPercent}%`;
+      thumb.style.left = `${leftPercent}%`;
+    }
+
+    // Allow users to tap anywhere on the slider track to jump through categories
+    function seekCategoryBar(e) {
+      const track = document.getElementById('catSliderTrack');
+      const container = document.getElementById('categoryPillContainer');
+      if (!track || !container) return;
+
+      const rect = track.getBoundingClientRect();
+      const clickRatio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      container.scrollTo({ left: clickRatio * maxScroll, behavior: 'smooth' });
     }
 
     // Smooth Scroll to Top
@@ -2006,6 +2056,12 @@
     // Initial Render on DOM Ready
     document.addEventListener('DOMContentLoaded', () => {
       renderMenuSections();
+      const pillContainer = document.getElementById('categoryPillContainer');
+      if (pillContainer) {
+        pillContainer.addEventListener('scroll', syncCategorySlider, { passive: true });
+        window.addEventListener('resize', syncCategorySlider, { passive: true });
+        syncCategorySlider();
+      }
     });
   </script>
 </body>
